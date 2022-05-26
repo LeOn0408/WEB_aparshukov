@@ -6,19 +6,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>badfa04f-8ead-4230-826b-e4aa82dc4405</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <AssemblyVersion>0.1.1-alpha</AssemblyVersion>
+    <FileVersion>0.1.1</FileVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\ark\js\main.js" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
   </ItemGroup>
 
 </Project>

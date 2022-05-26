@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная - ARK: Survival Evolved</title>
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script type='text/javascript' src='js/bootstrap.js'></script>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type='text/javascript' src='../js/bootstrap.js'></script>
+    <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="ark" width="70" height="70">
+        <img src="../images/logo.png" alt="ark" width="70" height="70">
         <nav>
             <a href="../" style="color: #ffffff; font-size: 100%; margin-top:10px;padding:10px; text-shadow: 1px 3px 3px black, 0 0 1em #44414d;">НОВОСТИ</a>
             <a href="https://ark-ru.gamepedia.com/ARK_Survival_Evolved_Wiki" style="color: #ffffff; font-size: 100%; margin-top:10px;padding:10px; text-shadow: 1px 3px 3px black, 0 0 1em #44414d;">WIKI</a>
@@ -19,18 +20,28 @@
             </a>
         </nav>
     </header>
-    <div class="namepage "></div>
+    <div class="namepage ">НОВОСТИ</div>
 
-    <article class="news">
-        <div id="first-content" class="link-news">
+    <article>
+        <div class="content" style="padding-left:5px;">
+            <script type='text/javascript' src='../js/openNews.js'></script>
         </div>
-        <div id="content-gen" class="link-news">
-        </div>
-        <script type='text/javascript' src='js/news.js'></script>
+        <script type="text/javascript">
+            VK.init({
+                apiId: 8074110,
+                onlyWidgets: true
+            });
+        </script>
+        <section class="comments">
+            <div id="vk_comments" style="width:95%;"></div>
+            <script type="text/javascript">
+                VK.Widgets.Comments('vk_comments');
+            </script>
+        </section>
     </article>
 
     <aside>
-        <script type="module" src='js/aside.js'></script>
+        <script type="module" src='../js/aside.js'></script>
     </aside>
 
     <footer>
