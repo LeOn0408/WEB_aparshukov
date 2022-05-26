@@ -12,7 +12,7 @@
             const onlinePlayers = await response.json();
             onlinePlayers.forEach(server => {
                 //console.log(server);
-                if (server.id > 0) {
+                if (server.isConnected) {
                     const iplist = document.createElement("div");
                     iplist.setAttribute("class", "iplist");
                     iplist.append(this.#getName(server));
@@ -42,7 +42,7 @@
     #getPlayers(server) {
         
         const p = document.createElement("span");
-        if (server.players[0].id == "0") {
+        if (server.players.length == 0) {
             p.innerHTML = "Список игроков(0): <br>Нет игроков";
         }
         else {
