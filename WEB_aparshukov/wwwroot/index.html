@@ -3,8 +3,42 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script src="js/vue.global.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <meta http-equiv="refresh" content="0; url=http://aparshukov.ru/ark" />
+    <header>
+        <logo>
+            <img src="images/logo.png"/>
+        </logo>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/blog">Проекты</a></li>
+                <li><a href="/contacts">Обо мне</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="info">
+        <!-- сделать динамическим -->
+        <article class="server-info">
+            <a href="ark/index.html">
+                <img src="images/ark.jpg" />
+            </a>
+            <a href="ark/index.html">
+                <img src="images/valheim.jpg" />
+            </a>
+        </article>
+    </article>
+    <footer>
+        <p>
+            Copyright © 2022. aparshukov.ru
+        </p>
+    </footer>
+    <div id="app"></div>
+    <script>
+        const vueApp = Vue.createApp({});
+        vueApp.mount('#app');
+    </script>
 </body>
 </html>
