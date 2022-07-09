@@ -46,17 +46,13 @@
             p.innerHTML = "Список игроков(0): <br>Нет игроков";
         }
         else {
-            server.players.forEach(player => {
-                
-                p.append("Активных игроков:");
-                p.innerHTML = `Активных игроков:<b style=\"float: right;color: greenyellow;\">${server.players.length}</b>
-                                <br> ${player.user}`
-            });
+            let listPlayers = [];
+            server.players.forEach(element => listPlayers.push(element.user))
+            p.innerHTML = `Активных игроков:<b style=\"float: right;color: greenyellow;\">${server.players.length}</b><br>${listPlayers.join(', ')}`
         }
-        
         return p;
     }
-    #getStatus(server) {
+    #getStatus() {
         const p = document.createElement("span");
         p.append("Статус:");
         const span = document.createElement("span");

@@ -1,4 +1,4 @@
-﻿import ServerInfo from "./getPlayers.js";
+﻿import ServerInfo from "./serverinfo.js";
 import Roadmap from "./roadmap.js";
 
 const aside = document.querySelector("aside");
